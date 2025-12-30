@@ -54,7 +54,7 @@ export default function App() {
           
         </p>
         <p className="mt-2 text-slate-600">
-          Search scientific literature and get key concepts.
+          Search scientific literature and get key concepts
         </p>
 
       </header>
@@ -89,16 +89,19 @@ export default function App() {
       )}
 
       {error && (
-        <p className="text-sm text-red-600">{error}</p>
+        <div className="my-2">
+            <p className="text-sm text-red-600">{error}</p>
+            <p className="text-sm mt-2">Since this is still ssan experimental app, the API token might have reach the rate limit, please wait a few seconds and try again</p>
+        </div>
       )}
 
-      {!loading && articles.length === 0 && searched && (
+      {!loading && articles.length === 0 && searched && !error && (
         <p className="text-sm text-slate-500">
-          No articles found for “{query}”
+          No results found for “{query}”
         </p>
       )}
 
-      {!loading && articles.length > 0 && query && (
+      {!loading && articles.length > 0 && query && !error && (
         <p className="mb-6 text-sm text-slate-600">
           Results for query:{" "}
           <span className="font-medium text-teal-700">
