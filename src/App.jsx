@@ -8,6 +8,7 @@ export default function App() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [searched, setSearched] = useState(false)
+  const api_endpoint = import.meta.env.VITE_BACKEND_API_ENDPOINT
 
   const searchArticles = async (searchQuery) => {
     if (!searchQuery.trim()) return;
@@ -19,7 +20,7 @@ export default function App() {
 
     try {
       const res = await fetch(
-        `http://localhost:3000/api/v1/search_articles?query=${encodeURIComponent(
+        `${api_endpoint}/search_articles?query=${encodeURIComponent(
           searchQuery
         )}`
       );
