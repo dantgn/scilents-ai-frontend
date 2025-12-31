@@ -47,14 +47,15 @@ export default function App() {
     <div className="mx-auto max-w-7xl px-6 py-10">
       {/* Header */}
       <header className="mb-8 max-w-3xl">
-        <h1 className="text-3xl font-bold text-slate-900">
-          Scilents AI <span className="text-sm">Your AI Research Assistant</span>
+        <h1 className="flex items-baseline gap-2 text-3xl font-bold text-slate-900">
+          <span>Scilents AI</span><span className="hidden sm:flex sm:leading-none text-sm">Your AI Research Assistant</span>
         </h1>
+        <span className="block sm:hidden font-bold text-sm">Your AI Research Assistant</span>
         <p className="mt-2 text-slate-600">
           
         </p>
         <p className="mt-2 text-slate-600">
-          Search scientific literature and get key concepts
+          Instant key concepts from scientific literature
         </p>
 
       </header>
