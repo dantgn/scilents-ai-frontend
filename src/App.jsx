@@ -8,6 +8,7 @@ export default function App() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [searched, setSearched] = useState(false)
+  const [lastQuery, setLastQuery] = useState()
   const api_endpoint = import.meta.env.VITE_BACKEND_API_ENDPOINT
 
   const searchArticles = async (searchQuery) => {
@@ -17,6 +18,7 @@ export default function App() {
       setSearched(true)
     setLoading(true);
     setError(null);
+    setLastQuery(searchQuery);
 
     try {
       const res = await fetch(
@@ -69,7 +71,7 @@ export default function App() {
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="Search for articles or topics you are interested in  (e.g. diabetes, breast cancer, etc.)"
+          placeholder="Search by topic or research area."
           className="flex-1 rounded-xl border border-slate-300 px-4 py-2.5 text-sm
                     focus:border-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-200"
         />
@@ -102,11 +104,11 @@ export default function App() {
         </p>
       )}
 
-      {!loading && articles.length > 0 && query && !error && (
+      {!loading && articles.length > 0 && lastQuery && !error && (
         <p className="mb-6 text-sm text-slate-600">
           Results for query:{" "}
           <span className="font-medium text-teal-700">
-            “{query}”
+            “{lastQuery}”
           </span>
         </p>
 )}
