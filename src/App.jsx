@@ -52,7 +52,7 @@ export default function App() {
 
       <div className="max-w-7xl px-6 py-10">
         {/* Header */}
-        <header className="mb-8 max-w-3xl mb-12">
+        <header className="max-w-3xl mb-12">
           <h1 className="flex items-baseline gap-2 text-3xl font-bold text-slate-900">
             <span>Scilents AI</span><span className="hidden sm:flex sm:leading-none text-sm">Your AI Research Assistant</span>
           </h1>
@@ -63,7 +63,6 @@ export default function App() {
           <p className="mt-2 text-slate-600">
             Instant key concepts from scientific literature
           </p>
-
         </header>
 
         {/* Search bar */}
