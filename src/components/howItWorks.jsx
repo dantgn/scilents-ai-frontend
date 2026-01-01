@@ -3,7 +3,7 @@ export default function HowItWorks() {
     {
       title: "Search scientific literature",
       description:
-        "Saerch by topic or research area to discover scientific articles aligned with your interests. An AI-driven search interprets context to highlight the most relevant studies.",
+        "Search by topic or research area to discover scientific articles aligned with your interests. An AI-driven search interprets context to highlight the most relevant studies.",
       icon: "🔍",
     },
     {
@@ -28,7 +28,7 @@ export default function HowItWorks() {
         </h2>
         <p className="mt-3 text-slate-600">
           An open-source tool designed to help the scientific community
-          quicly discover and better understand relevant research.
+          quickly discover and better understand relevant research.
         </p>
       </header>
 
