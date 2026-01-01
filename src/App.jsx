@@ -2,6 +2,7 @@ import { useState } from "react";
 import ArticleCard from "./components/ArticleCard";
 import "./App.css";
 import Footer from "./components/Footer";
+import HowItWorks from "./components/howItWorks";
 
 export default function App() {
   const [articles, setArticles] = useState([]);
@@ -49,9 +50,9 @@ export default function App() {
   return (
     <div className='min-h-screen flex flex-col'>
 
-      <div className="flex-grow max-w-7xl px-6 py-10">
+      <div className="max-w-7xl px-6 py-10">
         {/* Header */}
-        <header className="mb-8 max-w-3xl">
+        <header className="mb-8 max-w-3xl mb-12">
           <h1 className="flex items-baseline gap-2 text-3xl font-bold text-slate-900">
             <span>Scilents AI</span><span className="hidden sm:flex sm:leading-none text-sm">Your AI Research Assistant</span>
           </h1>
@@ -74,7 +75,7 @@ export default function App() {
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search by topic or research area."
+            placeholder="Search"
             className="flex-1 rounded-xl border border-slate-300 px-4 py-2.5 text-sm
                       focus:border-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-200"
           />
@@ -125,6 +126,9 @@ export default function App() {
             />
           ))}
         </div>
+      </div>
+      <div className="flex-grow">
+        <HowItWorks  />
       </div>
       <Footer />
     </div>
