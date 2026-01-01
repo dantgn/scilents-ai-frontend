@@ -97,7 +97,7 @@ export default function App() {
         {error && (
           <div className="my-2">
               <p className="text-sm text-red-600">{error}</p>
-              <p className="text-sm mt-2">Since this is still ssan experimental app, the API token might have reach the rate limit, please wait a few seconds and try again</p>
+              <p className="text-sm mt-2">Since this is still an experimental app, the API token might have reach the rate limit, please wait a few seconds and try again</p>
           </div>
         )}
 
